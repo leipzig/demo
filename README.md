@@ -71,6 +71,8 @@ For more details about the output files and reports, please refer to the
 
 nf-core/demo was originally written by Chris Hakkaart ([@christopher-hakkaart](https://github.com/christopher-hakkaart)).
 
+The pipeline is currently being maintained by the Nextflow community team as well as [Geraldine Van der Auwera](https://github.com/vdauwera) and [Florian Wuennemann](https://github.com/FloWuenne).
+
 <!-- We thank the following people for their extensive assistance in the development of this pipeline: -->
 
 ## Contributions and Support

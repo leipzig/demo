@@ -3,12 +3,6 @@
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## dev
-
-### `Changed`
-
-[#34](https://github.com/nf-core/demo/pull/34) Updated the JSON schema to make input validation stricter, thus preventing more errors during the pipeline run.
-
 ## 1.0.2
 
 ### Credits
@@ -17,9 +11,17 @@ Special thanks to the following for their reviews and assistance:
 
 - [Chris Hakkaart](https://github.com/christopher-hakkaart)
 - [Marcel Ribeiro-Dantas](https://github.com/mribeirodantas)
+- [Maxime Garcia](https://github.com/maxulysse)
+- [Geraldine Van der Auwera](https://github.com/vdauwera)
+- [Florian Wuennemann](https://github.com/FloWuenne)
 
 ### Changed
 
+[#39][https://github.com/nf-core/demo/pull/39] - Remove -C from bach in nextflow.config
+[#38][https://github.com/nf-core/demo/pull/38] - Template update for nf-core/tools v3.3.1
+[#36][https://github.com/nf-core/demo/pull/36] - Template update for nf-core/tools v3.2.1
+[#34][https://github.com/nf-core/demo/pull/34] - updated nextflow_schema.json
+[#32][https://github.com/nf-core/demo/pull/32] - Minor fixes and template update
 [#29](https://github.com/nf-core/demo/pull/29) - Template update for nf-core/tools v3.2.0
 [#23](https://github.com/nf-core/demo/pull/23) - Update to latest `seqtk` and `fastqc` modules
 [#21](https://github.com/nf-core/demo/pull/21) - Template update for nf-core/tools v3.1.0
