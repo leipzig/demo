@@ -4,6 +4,7 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
 include { FASTQC                 } from '../modules/nf-core/fastqc/main'
+include { RANDOM_FAIL            } from '../modules/local/random_fail/main'
 include { SEQTK_TRIM             } from '../modules/nf-core/seqtk/trim/main'
 include { MULTIQC                } from '../modules/nf-core/multiqc/main'
 include { paramsSummaryMap       } from 'plugin/nf-schema'
@@ -33,6 +34,14 @@ workflow DEMO {
     )
     ch_multiqc_files = ch_multiqc_files.mix(FASTQC.out.zip.collect{it[1]})
     ch_versions = ch_versions.mix(FASTQC.out.versions.first())
+
+    //
+    // MODULE: Run RANDOM_FAIL (randomly fails 20% of the time)
+    //
+    RANDOM_FAIL (
+        ch_samplesheet
+    )
+    ch_versions = ch_versions.mix(RANDOM_FAIL.out.versions.first())
 
     //
     // MODULE: Run SEQTK_TRIM
