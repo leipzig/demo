@@ -28,7 +28,7 @@ process RANDOM_FAIL {
     echo "Random number generated: \$RANDOM_NUM"
 
     # Fail if random number is less than X (X% chance)
-    if [ \$RANDOM_NUM -lt 5 ]; then
+    if [ \$RANDOM_NUM -lt 10 ]; then
         echo "ERROR: Random failure triggered! (${prefix})"
         exit 1
     fi
